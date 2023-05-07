@@ -1,0 +1,219 @@
+html,
+body {
+  margin: 0px;
+  background-color: #00a1d6;
+  overflow: hidden;
+ 
+}
+
+[id="el"] {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  background-color: #9370db;
+  border-radius: 50%;
+  border: 2px solid #0f0;
+}
+.blob {
+	border-radius: 40% 60% 60% 40% / 70% 30% 70% 30%;
+    width: 70vmin;
+    height: 70vmin;
+    background: #f09;
+    background-image: linear-gradient(45deg, #3023AE 0%, #f09 100%);
+    box-shadow: -10vmin 10vmin 0 rgba(255,255,255,0.07);
+	
+	animation: morph 10s linear infinite alternate;
+  position: relative;
+  top: 400px;
+  right: -550px;
+}
+
+@keyframes morph {
+  0% {
+    border-radius: 40% 60% 60% 40% / 70% 30% 70% 30%;
+  }
+  100% {
+    border-radius: 40% 60%;
+  }
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+html, body {
+	height: 100%;
+}
+body {
+	display: grid;
+	place-items: center;
+}
+.cont{
+  width: 1000px;
+  height: 600px;
+  background: white;
+  opacity: .2;
+  box-shadow: 10px 10px 10px black;
+  position: absolute;
+  border-radius: 15px;
+}
+.im img{
+  position: relative;
+  z-index: 999;
+  width: 600px;
+  height: 700px;
+  bottom: 500px;
+  left: 170px;
+}
+.tet h6{
+  position: absolute;
+  top: 340px;
+  left: 320px;
+  font-size: medium;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: white;
+}
+.wrapper.four {
+ 
+  font-size: 2rem;
+  font-family: "Play", sans-serif;
+  position: absolute;
+  color: #ff00fb;
+  left: 300px;
+  top: 150px;
+  font-weight:bolder;
+}
+.four .type{
+  padding: 2rem 1rem;
+  width: auto;
+  margin: auto;
+}
+.four h3 {
+  width: 13ch;
+  border-right: 4px solid rgb(255, 255, 255);
+  margin: 2rem auto;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 2s steps(13, end), blink-caret 0.5s step-end infinite alternate;
+}
+@-webkit-keyframes typing {
+  from {
+      width: 0;
+  }
+}
+@-webkit-keyframes blink-caret {
+  50% {
+      border-color: transparent;
+  }
+}
+.blob2 {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  left: 20%;
+  top: 17%;
+  transform: translate(-50%, -50%);
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  background-color: rgb(0,21,43);
+background-image: linear-gradient(45deg, #3023AE 0%, #f09 100%);
+z-index: 999;
+ 
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-animation: blob 5s linear 0s infinite;
+          animation: blob 5s linear 0s infinite;
+}
+
+@-webkit-keyframes blob {
+  0%   {border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;}
+  25%  {border-radius: 70% 30% 32% 68% / 30% 30% 70% 70%;}
+  50%  {border-radius: 50% 50% 32% 68% / 55% 24% 76% 45%;}
+  75%  {border-radius: 28% 72% 57% 43% / 79% 24% 76% 21%;}
+  100% {border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;}
+}
+button {
+  --fontSize: 1.5rem;
+  --button: 290, 80%;
+  --buttonColor: hsl(var(--button), 70%);
+  --sideColor: hsl(var(--button), 40%);
+  --text: hsl(var(--button), 30%);
+  --bgColor: #e8e8e8;
+  position: absolute;
+  top: 500px;
+  left: 330px;
+  z-index: 999;
+  font-size: 0;
+  font-family: sans-serif;
+  transition: all 300ms cubic-bezier(0.47, 1.64, 0.41, 0.8);
+  border-radius: 999px;
+  padding: calc(var(--fontSize) / 2);
+  height: calc(var(--fontSize) * 2);
+  min-width: calc(var(--fontSize) * 2);
+  line-height: calc(var(--fontSize) * 0.75);
+  border: none;
+  outline: none;
+  background-color: var(--buttonColor);
+  transform: rotate(-25deg);
+  color: var(--text);
+  white-space: nowrap;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  box-shadow: calc(var(--fontSize) / -25) calc(var(--fontSize) / 25) calc(var(--fontSize) / 25) #ffffffbb inset, calc(var(--fontSize) / -25) calc(var(--fontSize) / -50) calc(var(--fontSize) / 25) #ffffff88 inset,
+    0 0 calc(var(--fontSize) / 5) #0f004a77 inset, 0 0 0 calc(var(--fontSize) / 3.6) var(--buttonColor) inset,
+    0 0 calc(var(--fontSize) / 6.25) calc(var(--fontSize) / 3.125) #0f004a44 inset, calc(var(--fontSize) / -25) calc(var(--fontSize) / 12.5) 0 var(--sideColor),
+    calc(var(--fontSize) / -8.33) calc(var(--fontSize) / 12.5) calc(var(--fontSize) / 6.25) #0f004a44, calc(var(--fontSize) / -16.666) calc(var(--fontSize) / 12.5) calc(var(--fontSize) / 25) #0f004a66;
+}
+
+button:hover {
+  transform: rotate(0);
+  overflow: visible;
+  font-size: var(--fontSize);
+}
+
+button::before,
+button::after {
+  content: ": ";
+  font-family: serif;
+  font-weight: bold;
+  text-shadow: calc(var(--fontSize) / 25) 0 0 var(--sideColor), 0 0 calc(var(--fontSize) / 12.5) #0f004a55,
+    calc(var(--fontSize) / 50) 0 0 var(--sideColor), calc(var(--fontSize) / 50) calc(var(--fontSize) / -50) 0 var(--sideColor);
+  color: var(--bgColor);
+  font-size: var(--fontSize);
+}
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000000;
+  transition: opacity 0.75s, visibility 0.75s;
+}
+
+.loader--hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loader::after {
+  content: "";
+  width: 50px;
+  height: 50px;
+  border: 5px solid #cd00bc;
+  border-top-color: #00e5ff;
+  border-radius: 50%;
+  animation: loading 0.75s ease infinite;
+}
+
+@keyframes loading {
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}

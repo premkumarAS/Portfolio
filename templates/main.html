@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="icon" href="{% static 'images/doclogo.png' %}" type="image" >
+    <link rel="stylesheet" href="{% static 'css/mainstyle.css' %}">
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script src="{% static 'js/scripts.js' %}" defer></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body>
+    <!-- <section id="loader">
+        <img src="images/logo.svg" alt="logo">
+    </section> -->
+    <section class="main">
+        <div class="container">
+            <nav>
+                <div class="nav-container">
+                    <div class="logo montserrat"> <span class="orange montserrat">Prem</span> Kumar A S</div>
+                    <div class="links-container">
+                        <a href="#about-me">About Me</a>
+                        <a href="{% url 'mywork' %}">My Work</a>
+                        <a href="{% url 'form' %}">Contact</a>
+                        
+                    </div>
+                </div>
+            </nav>
+            <div class="w3-content w3-section" style="max-width:500px" id="cr">
+                <img class="mySlides" src="{% static 'images/c1.png'%}" style="width:100%">
+                <img class="mySlides" src="{% static 'images/c2.png'%}" style="width:100%">
+                <img class="mySlides" src="{% static 'images/c3.png'%}" style="width:100%">
+                <img class="mySlides" src="{% static 'images/c4.png'%}" style="width:100%">
+              </div>
+
+            <div class="social-media-links-container" id="social-media-links-container">
+                <div class="icons-cotainer">
+                    <a href="https://www.instagram.com/prem_kumar3369/" target="_blank"><img
+                            src="{% static 'images/insta.svg'%}" alt="insta" style="width: 50px; height:50px"></a>
+                    <a href="https://github.com/premkumarAS" target="_blank"><img src="{% static 'images/git.svg'%}"
+                    style="width: 50px; height:50px" alt="twitter"></a>
+                    <a href="https://www.linkedin.com/in/prem-kumar-b2a143238/" target="_blank"><img
+                        src="{% static 'images/ll.svg'%}" alt="linkdin" style="width: 50px; height:50px;"></a>
+                </div >
+                <h5 class="fm"> Follow me </h5>
+            </div>
+            <div class="showcase-container">
+                <div class="showcase-image">
+                    <!-- <img src="images/showcaseImage.svg" alt="showcase">    -->
+                    <model-viewer class="model" alt="laptop" src="images/laptop.glb" shadow-intensity="0" camera-controls touch-action="pan-y" camera-orbit="-45deg 65deg 9m" poster="images/showcaseImage.svg" environment-image="images/dancing_hall_2k.hdr" exposure="1.5" autoplay animation-name="animation1" auto-rotate disable-zoom disable-tap></model-viewer>
+                </div>
+                <div class="showcase-text">
+                    <h1 class="montserrat"> Hi, You found me!
+                        <br> I am <span class="orange montserrat"> Developer</span><span
+                            class="orange montserrat"> from India</span>
+                    </h1>
+                    <a href="/static/resume/PremKumar CV.pdf" download="PremKumar" >
+                    <button class="ui-btn">
+                        <span>
+                         Resume 
+                        </span>
+                      </button>
+                    </a> 
+                </div>
+            </div>
+            <div class="mail-button mail-button1">
+                <a href="mailto:aspremkumar76@gmail.com"><img src="{% static 'images/mail.svg'%}" alt="mail"  style="width: 50px; height:50px"></a>
+            </div>
+        </div>
+
+    </section>
+
+
+    <section class="about-me" id="about-me">
+        <div class="container">
+            <div class="about-me-container">
+                <div class="about-me-title">
+                    About <br> Prem
+                </div>
+       <div class="about2">
+        <p class="pre">An innovative developer who possesses foresight and creativity.
+            There is a profound sense of satisfaction in both the delivery and excellence of the output.</p>
+        <p class="pre">Prem has the ability to develop visually stunning and adaptable web applications.</p>
+       </div>
+       <div class="imgme">
+        <div class="gooey"><img src="{% static 'images/me2.png'%}" alt="" id="imgme2"  style="width: 300px; height:500px"></div>
+
+       </div>
+            
+
+                <div class="mail-button mail-button2">
+                    <a href="mailto:aspremkumar76@gmail.com"><img src="{% static 'images/mail.svg'%}" alt="mail" style="width: 50px; height:50px"></a>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <section class="skills">
+        <div class="container">
+            <div class="title-skills">
+                Skills
+            </div>
+            <div class="skills-flex-container">
+                <div class="box">
+                    <div class="image">
+                        <img src="{% static 'images/py.png'%}" alt="python">
+                    </div>
+                    <div class="title">Python</div>
+                </div>
+                <div class="box">
+                    <div class="image">
+                        <img src="{% static 'images/django.png'%}" alt="photoshop">
+                    </div>
+                    <div class="title">Django</div>
+                </div>
+                <div class="box">
+                    <div class="image">
+                        <img src="{% static 'images/dsa.png'%}" alt="photoshop">
+                    </div>
+                    <div class="title">Data Structures And Algorithms</div>
+                </div>
+                <div class="box">
+                    <div class="image">
+                        <img src="{% static 'images/html.png'%}" alt="photoshop">
+                    </div>
+                    <div class="title">HTML</div>
+                </div>
+                <div class="box">
+                    <div class="image">
+                        <img src="{% static 'images/css.png'%}" alt="photoshop">
+                    </div>
+                    <div class="title">CSS</div>
+                </div>
+                <div class="box">
+                    <div class="image">
+                        <img src="{% static 'images/js.png'%}" alt="photoshop">
+                    </div>
+                    <div class="title">JavaScript</div>
+                </div>
+                <div class="box">
+                    <div class="image">
+                        <img src="{% static 'images/celery.png'%}" alt="photoshop">
+                    </div>
+                    <div class="title">Celery</div>
+                </div>
+                <div class="box">
+                    <div class="image">
+                        <img src="{% static 'images/Redis.png'%}" alt="photoshop">
+                    </div>
+                    <div class="title">Redis</div>
+                </div>
+                <div class="box">
+                    <div class="image">
+                        <img src="{% static 'images/mysql.png'%}" alt="photoshop">
+                    </div>
+                    <div class="title">MySQL</div>
+                </div>
+                <div class="box">
+                    <div class="image">
+                        <img src="{% static 'images/postgresql.png'%}" alt="photoshop">
+                    </div>
+                    <div class="title">PostgreSQL</div>
+                </div>
+                <div class="box">
+                    <div class="image">
+                        <img src="{% static 'images/api.png'%}" alt="photoshop">
+                    </div>
+                    <div class="title">API</div>
+                </div>
+                <div class="box">
+                    <div class="image">
+                        <img src="{% static 'images/bootsrap.png'%}" alt="photoshop">
+                    </div>
+                    <div class="title">BootStrap</div>
+                </div>
+            </div>
+        </div>
+    </section>
+   
+
+    <section class="footer" id="footer">
+        <div class="container">
+            <div class="footer-container">
+                <a href="index.html"><img class="logo-footer" src="{% static 'images/orangelogo.png' %}" alt="smit" style="width: 200px; height:200px"></a>
+                <div class="footer-social-media-links">
+                    <a href="https://www.instagram.com/prem_kumar3369/" target="_blank" ><img
+                            src="{% static 'images/finstagram.png'%}" alt="insta" style="width: 50px; height:50px"></a>
+                    <a href="https://github.com/premkumarAS" target="_blank"><img
+                            src="{% static 'images/fgit.png'%}" alt="Github" style="width: 50px; height:50px"></a>
+                    <a href="https://www.linkedin.com/in/prem-kumar-b2a143238/" target="_blank"><img
+                            src="{% static 'images/fll.png'%}" alt="linkedin" style="width: 50px; height:50px"></a>
+                    <a href="mailto:aspremkumar76@gmail.com"><img src="{% static 'images/fgmail.png'%}"
+                            alt="mail"  style="width: 50px; height:50px"></a>
+                </div>
+                <div class="footer-nav-links">
+                    <a href="#about-me">About</a>
+                    <a href="mywork.html">My Work</a>
+                    <a href="{% url 'form' %}">Contact</a>
+                </div>
+            </div>
+        </div>
+    </section>
+  
+
+      
+      <script>
+       
+      var myIndex = 0;
+      carousel();
+      
+      function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";  
+        }
+        myIndex++;
+        if (myIndex > x.length) {myIndex = 1}    
+        x[myIndex-1].style.display = "block";  
+        setTimeout(carousel, 4000); // Change image every 2 seconds
+      }
+      </script>
+
+
+</body>
+</html>

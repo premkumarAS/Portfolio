@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'css/mainstyle.css' %}">
+  <link rel="icon" href="{% static 'images/doclogo.png' %}" type="image" >
+  <title>Welcome page</title>
+</head>
+<body>
+  <div id="el">
+   
+  </div>
+  <div class="blob2"></div>
+  <div class="blob">
+   
+  </div>
+  <div class="im">
+  <img src="{% static 'images/yeti.png'%}" alt=""></div>
+  <div class="wrapper four">
+    <div class="type">
+        <h3 class="typing">BRING LIFE <br>TO YOUR IDEAS </h3>
+    </div>
+</div> 
+<div class="tet"><h6>Our web design process involves creating a <br> site's architecture, designing its layout and user interface, <br> and coding it to work correctly.</h6></div>
+
+<button onclick=""> <a href="{% url 'main' %}"> Enter Portfolio </a> </button>
+
+  <div class="cont"> </div>
+<div class="loader"></div>
+  
+   <script>
+    window.addEventListener("load", () => {
+      const loader = document.querySelector(".loader");
+    
+      loader.classList.add("loader--hidden");
+    
+      loader.addEventListener("transitionend", () => {
+        document.body.removeChild(loader);
+      });
+    });
+    
+
+    var el = document.getElementById("el"),
+  elWidth = el.offsetWidth,
+  elHeight = el.offsetHeight,
+  width = window.innerWidth,
+  height = window.innerHeight,
+  target = {
+    x: width / 2,
+    y: height / 2
+  },
+  position = {
+    x: height,
+    y: width
+  },
+  ease = 0.075;
+
+window.addEventListener("mousemove", function(event) {
+  target.x = event.clientX;
+  target.y = event.clientY;
+});
+
+function update() {
+  var dx = target.x - position.x,
+    dy = target.y - position.y,
+    vx = dx * ease,
+    vy = dy * ease;
+
+  position.x += vx;
+  position.y += vy;
+
+  el.style.left = (position.x - elWidth / 2).toFixed() + "px";
+  el.style.top = (position.y - elHeight / 2).toFixed() + "px";
+
+  requestAnimationFrame(update);
+}
+
+update();
+
+
+   </script>
+</body>
+</html>
